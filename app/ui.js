@@ -1751,7 +1751,7 @@ if (l10n.language !== "en" && l10n.dictionary === undefined) {
     UI.prime();
 }
 
-UI.load(function() {
+UI.connect(function() {
     console.log("Connecting to server");
 });
 
