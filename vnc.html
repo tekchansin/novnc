@@ -24,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <!-- Icons (see Makefile for what the sizes are for) -->
-    <!-- <link rel="icon" sizes="16x16" type="image/png" href="app/images/icons/novnc-16x16.png">
+    <link rel="icon" sizes="16x16" type="image/png" href="app/images/icons/novnc-16x16.png">
     <link rel="icon" sizes="24x24" type="image/png" href="app/images/icons/novnc-24x24.png">
     <link rel="icon" sizes="32x32" type="image/png" href="app/images/icons/novnc-32x32.png">
     <link rel="icon" sizes="48x48" type="image/png" href="app/images/icons/novnc-48x48.png">
@@ -37,9 +37,9 @@
     <link rel="icon" sizes="144x144" type="image/png" href="app/images/icons/novnc-144x144.png">
     <link rel="icon" sizes="152x152" type="image/png" href="app/images/icons/novnc-152x152.png">
     <link rel="icon" sizes="192x192" type="image/png" href="app/images/icons/novnc-192x192.png">
-    <link rel="icon" sizes="any" type="image/svg+xml" href="app/images/icons/novnc-icon.svg"> -->
+    <link rel="icon" sizes="any" type="image/svg+xml" href="app/images/icons/novnc-icon.svg">
     <!-- Repeated last so that legacy handling will pick this -->
-    <!-- <link rel="icon" sizes="16x16" type="image/png" href="app/images/icons/novnc-16x16.png"> -->
+    <link rel="icon" sizes="16x16" type="image/png" href="app/images/icons/novnc-16x16.png">
 
     <!-- Apple iOS Safari settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -100,6 +100,7 @@
 
             <div class="noVNC_scroll">
 
+            <h1 class="noVNC_logo" translate="no"><span>no</span><br />VNC</h1>
 
             <!-- Drag/Pan the viewport -->
             <input type="image" alt="viewport drag" src="app/images/drag.svg"
@@ -168,7 +169,7 @@
 
             <!-- Clipboard -->
             <input type="image" alt="Clipboard" src="app/images/clipboard.svg"
-                id="noVNC_clipboard_button" class="noVNC_button noVNC_hidden"
+                id="noVNC_clipboard_button" class="noVNC_button"
                 title="Clipboard" />
             <div class="noVNC_vcenter">
             <div id="noVNC_clipboard" class="noVNC_panel">
@@ -192,7 +193,7 @@
                 id="noVNC_settings_button" class="noVNC_button"
                 title="Settings" />
             <div class="noVNC_vcenter">
-            <div id="noVNC_settings"  style="display: none;" class="noVNC_panel">
+            <div id="noVNC_settings" class="noVNC_panel">
                 <ul>
                     <li class="noVNC_heading">
                         <img src="app/images/settings.svg"> Settings
@@ -288,7 +289,7 @@
     <!-- Connect button -->
     <div class="noVNC_center">
         <div id="noVNC_connect_dlg">
-            <!-- <div class="noVNC_logo" translate="no"><span>no</span>VNC</div> -->
+            <div class="noVNC_logo" translate="no"><span>no</span>VNC</div>
             <div id="noVNC_connect_button"><div>
                 <img src="app/images/connect.svg"> Connect
             </div></div>
