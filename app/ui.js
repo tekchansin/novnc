@@ -178,7 +178,8 @@ var UI = {
         UI.initSetting('view_only', false);
         UI.initSetting('path', 'websockify');
         UI.initSetting('repeaterID', '');
-        UI.initSetting('reconnect', false);
+        // UI.initSetting('reconnect', false);
+        UI.initSetting('reconnect', true);
         UI.initSetting('reconnect_delay', 5000);
 
         UI.setupSettingLabels();
@@ -1041,6 +1042,16 @@ var UI = {
         var port = UI.getSetting('port');
         var path = UI.getSetting('path');
 
+        // If a token variable is passed in, set the parameter in a cookie.
+        // This is used by nova-novncproxy.
+        var token = WebUtil.getConfigVar('token', null);
+        if (token) {
+            // if token is already present in the path we should use it
+            path = WebUtil.injectParamIfMissing(path, "token", token);
+
+            WebUtil.createCookie('token', token, 1)
+        }
+        
         if (typeof password === 'undefined') {
             password = WebUtil.getConfigVar('password');
         }
