@@ -1051,7 +1051,7 @@ var UI = {
 
             WebUtil.createCookie('token', token, 1)
         }
-        
+
         if (typeof password === 'undefined') {
             password = WebUtil.getConfigVar('password');
         }
@@ -1703,7 +1703,7 @@ var UI = {
     updateDesktopName: function(rfb, name) {
         UI.desktopName = name;
         // Display the desktop name in the document title
-        document.title = name + " - noVNC";
+        // document.title = name + " - noVNC";
     },
 
     bell: function(rfb) {
@@ -1750,5 +1750,9 @@ if (l10n.language !== "en" && l10n.dictionary === undefined) {
 } else {
     UI.prime();
 }
+
+UI.load(function() {
+    console.log("Connecting to server");
+});
 
 export default UI;
