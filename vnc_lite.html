@@ -124,8 +124,24 @@
                     value="Keyboard" title="Show Keyboard" />
             </div>
 
+            <input type="image" alt="Ctrl" src="app/images/ctrl.svg"
+            id="noVNC_toggle_ctrl_button" class="noVNC_button"
+            title="Toggle Ctrl"/>
+            <input type="image" alt="Alt" src="app/images/alt.svg"
+                id="noVNC_toggle_alt_button" class="noVNC_button"
+                title="Toggle Alt"/>
+            <input type="image" alt="Tab" src="app/images/tab.svg"
+                id="noVNC_send_tab_button" class="noVNC_button"
+                title="Send Tab"/>
+            <input type="image" alt="Esc" src="app/images/esc.svg"
+                id="noVNC_send_esc_button" class="noVNC_button"
+                title="Send Escape"/>
+            <input type="image" alt="Ctrl+Alt+Del" src="app/images/ctrlaltdel.svg"
+                id="noVNC_send_ctrl_alt_del_button" class="noVNC_button"
+                title="Send Ctrl-Alt-Del" />
+
             <!-- Extra manual keys -->
-            <div id="noVNC_extra_keys">
+            <div id="noVNC_extra_keys" style="display:none">
                 <input type="image" alt="Extra keys" src="app/images/toggleextrakeys.svg"
                     id="noVNC_toggle_extra_keys_button" class="noVNC_button"
                     title="Show Extra Keys"/>
@@ -166,11 +182,11 @@
             </div>
 
             <!-- Clipboard -->
-            <input type="image" alt="Clipboard" src="app/images/clipboard.svg"
+            <input type="image"  style="display:none" alt="Clipboard" src="app/images/clipboard.svg"
                 id="noVNC_clipboard_button" class="noVNC_button"
                 title="Clipboard" />
             <div class="noVNC_vcenter">
-            <div id="noVNC_clipboard" class="noVNC_panel">
+            <div id="noVNC_clipboard" style="display:none" class="noVNC_panel">
                 <div class="noVNC_heading">
                     <img src="app/images/clipboard.svg"> Clipboard
                 </div>
